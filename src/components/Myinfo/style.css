@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.userPrf {
+    padding: 15px;
+}
+
+.userPrf-prf {
+    cursor: pointer;
+}
+
+.profdet-li {
+    list-style: none;
+    float: left;
+    color: #444;
+    padding: 0 15px;
+}
+
+.li-flipped {
+    color: #FF4949;
+    background-color: #fbe9e9;
+}
+
+.li-link {
+    color: #444;
+    cursor: pointer;
+}
+
+.li-link:hover {
+    color: #444;
+}
