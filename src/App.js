@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Main />} />
+        <Route path="/" element={<Main />} />df
         <Route path="/login" element={<Login />} />
         <Route path="/frame" element={<Frame />} />
         <Route path="/parts" element={<Parts />} />
