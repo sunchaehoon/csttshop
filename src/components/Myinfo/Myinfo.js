@@ -3,6 +3,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import * as S from './Styled.js';
 import Header from '../Header/Header.js';
 import './style.css';
+import { Routes, Route } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 const Myinfo = () => {
