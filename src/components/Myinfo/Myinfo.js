@@ -53,5 +53,5 @@ const Myinfo = () => {
 };
 
 // 내 정보(main), 장바구니, 찜한 상품, 내Q&A 
-
+//d
 export default Myinfo;
