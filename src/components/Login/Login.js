@@ -95,7 +95,6 @@ function Login() {
         <>
             <S.Container>
                 <Header />
-
             
                 <S.Lgscreen>
                     <S.Loginmsg>로그인</S.Loginmsg>
@@ -124,7 +123,7 @@ function Login() {
                                     onChange={(e) => {setUserPw(e.target.value)}} />
                             </S.Lgndv2>
                         </S.LoginboxIB>
-                        <S.Lgnbtn type='submit' value='로그인' onClick={lgnCheck}></S.Lgnbtn>
+                        <S.Lgnbtn type='submit' value='로그인' onClick={lgnCheck} />
                         <ToastContainer />
                     </S.Loginbox>
                 </S.Lgscreen>

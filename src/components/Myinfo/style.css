@@ -18,9 +18,20 @@
     padding: 0 15px;
 }
 
-.li-flipped {
-    color: #FF4949;
+.profdet-li-selected {
+    list-style: none;
+    float: left;
     background-color: #fbe9e9;
+    padding: 0 15px;
+}
+
+.li-link-selected {
+    color: #FF4949;
+    cursor: pointer;
+}
+
+.li-link-selected:hover {
+    color: #FF4949;
 }
 
 .li-link {
