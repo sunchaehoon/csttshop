@@ -13,17 +13,33 @@ const Myinfo = () => {
     const navigate = useNavigate();
     //const profdet = document.querySelector(".profdet-li");
     const [isSelect, setToggle] = useState(false);
-    
-    
-    function liCheck() {
-        setToggle(isSelect => !isSelect);   // on/off (boolean)
-    }
 
-    function InfoClick() {
-        
+    let info = document.querySelector("#myinfo");
+    let infoInf = document.querySelector("#myinfo-info");
+
+    infoInf.style.display = "none";
+    
+    
+    // function liCheck() {
+    //     setToggle(isSelect => !isSelect);   // on/off (boolean)
+    // }
+
+    function InfoClick() {    
+        info.style.display = "none";
+        infoInf.style.visibility = "visible";
     }
     function BasketClick() {
         
+    }
+    function SelectClick() {
+        return (
+            <Select />
+        );
+    }
+    function MyQnAClick() {
+        return (
+            <MyQnA />
+        );
     }
     
 
@@ -38,56 +54,64 @@ const Myinfo = () => {
                         </div>
                         <S.ProfName><span>{localStorage.getItem('username')}</span></S.ProfName>
                     </S.Prof>
-                    <S.ProfDetail>
+                    <S.ProfDetail id="myinfo">
                         <S.ProfDetailLi>
                             <ul>
                                 <li className="profdet-li">
                                     <Link to="/myinfo/info" className='li-link' onClick={InfoClick}>내 정보</Link>
                                 </li>
                                 <li className="profdet-li">
-                                    <Link to="/myinfo/basket" className='li-link'>장바구니</Link>
+                                    <Link to="/myinfo/basket" className='li-link' onClick={BasketClick}>장바구니</Link>
                                 </li>
                                 <li className="profdet-li">
-                                    <Link to="/myinfo/select" className='li-link'>찜한 상품</Link>
+                                    <Link to="/myinfo/select" className='li-link' onClick={SelectClick}>찜한 상품</Link>
                                 </li>
                                 <li className="profdet-li">
-                                    <Link to=".myinfo/myQ&A" className='li-link'>내Q&A</Link>
+                                    <Link to="/myinfo/myQ&A" className='li-link' onClick={MyQnAClick}>내Q&A</Link>
                                 </li>
                             </ul>
                         </S.ProfDetailLi>
-
                     </S.ProfDetail>
+                    <Info />
                 </S.MyContent>
             </S.Container>
         </>
     );
+
+    function Info () {
+    
+        return (
+            <>
+                <S.ProfDetail id="myinfo-info">
+                    <S.ProfDetailLi>
+                        <ul>
+                            <li className="profdet-li">
+                                <Link to="/myinfo/info" className='li-link li-link-selected' onClick={InfoClick}>내 정보</Link>
+                            </li>
+                            <li className="profdet-li">
+                                <Link to="/myinfo/basket" className='li-link'>장바구니</Link>
+                            </li>
+                            <li className="profdet-li">
+                                <Link to="/myinfo/select" className='li-link'>찜한 상품</Link>
+                            </li>
+                            <li className="profdet-li">
+                                <Link to="/myinfo/myQ&A" className='li-link'>내Q&A</Link>
+                            </li>
+                        </ul>
+                    </S.ProfDetailLi>
+                </S.ProfDetail>
+            </>
+        );
+    }
+
 };
 
-const Info = () => {
-    return (
-        <>
-            <S.ProfDetailLi>
-                <ul>
-                    <li className="profdet-li">
-                        <Link to="/myinfo/info" className='li-link li-selected'>내 정보</Link>
-                    </li>
-                    <li className="profdet-li">
-                        <Link to="/myinfo/basket" className='li-link'>장바구니</Link>
-                    </li>
-                    <li className="profdet-li">
-                        <Link to="/myinfo/select" className='li-link'>찜한 상품</Link>
-                    </li>
-                    <li className="profdet-li">
-                        <Link to=".myinfo/myQ&A" className='li-link'>내Q&A</Link>
-                    </li>
-                </ul>
-            </S.ProfDetailLi>
-        </>
-    );
-}
+
+
+
 
 const Basket = () => {
-    return(
+    return (
         <>
             <S.ProfDetailLi>
                 <ul>
@@ -102,6 +126,52 @@ const Basket = () => {
                     </li>
                     <li className="profdet-li">
                         <Link to=".myinfo/myQ&A" className='li-link'>내Q&A</Link>
+                    </li>
+                </ul>
+            </S.ProfDetailLi>
+        </>
+    );
+}
+
+const Select = () => {
+    return (
+        <>
+            <S.ProfDetailLi>
+                <ul>
+                    <li className="profdet-li">
+                        <Link to="/myinfo/info" className='li-link'>내 정보</Link>
+                    </li>
+                    <li className="profdet-li">
+                        <Link to="/myinfo/basket" className='li-link'>장바구니</Link>
+                    </li>
+                    <li className="profdet-li">
+                        <Link to="/myinfo/select" className='li-link li-selected'>찜한 상품</Link>
+                    </li>
+                    <li className="profdet-li">
+                        <Link to=".myinfo/myQ&A" className='li-link'>내Q&A</Link>
+                    </li>
+                </ul>
+            </S.ProfDetailLi>
+        </>
+    );
+}
+
+const MyQnA = () => {
+    return (
+        <>
+            <S.ProfDetailLi>
+                <ul>
+                    <li className="profdet-li">
+                        <Link to="/myinfo/info" className='li-link'>내 정보</Link>
+                    </li>
+                    <li className="profdet-li">
+                        <Link to="/myinfo/basket" className='li-link'>장바구니</Link>
+                    </li>
+                    <li className="profdet-li">
+                        <Link to="/myinfo/select" className='li-link'>찜한 상품</Link>
+                    </li>
+                    <li className="profdet-li">
+                        <Link to=".myinfo/myQ&A" className='li-link li-selected'>내Q&A</Link>
                     </li>
                 </ul>
             </S.ProfDetailLi>
