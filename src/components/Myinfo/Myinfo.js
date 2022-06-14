@@ -17,12 +17,7 @@ const Myinfo = () => {
     let info = document.querySelector("#myinfo");
     let infoInf = document.querySelector("#myinfo-info");
 
-    infoInf.style.display = "none";
-    
-    
-    // function liCheck() {
-    //     setToggle(isSelect => !isSelect);   // on/off (boolean)
-    // }
+
 
     function InfoClick() {    
         info.style.display = "none";
@@ -43,6 +38,7 @@ const Myinfo = () => {
     }
     
 
+    
     return (
         <>
             <S.Container>
