@@ -42,3 +42,8 @@
 .li-link:hover {
     color: #444;
 }
+
+
+#myinfo-info {
+    display: none;
+}
