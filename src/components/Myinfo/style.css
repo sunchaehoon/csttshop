@@ -9,6 +9,11 @@
 
 .userPrf-prf {
     cursor: pointer;
+    user-select: none;
+}
+
+.userprfname {
+    user-select: none;
 }
 
 .profdet-li {
@@ -28,6 +33,7 @@
 .li-link-selected {
     color: #FF4949;
     cursor: pointer;
+    user-select: none;
 }
 
 .li-link-selected:hover {
@@ -37,26 +43,11 @@
 .li-link {
     color: #444;
     cursor: pointer;
+    user-select: none;
 }
 
 .li-link:hover {
     color: #444;
 }
 
-
-#myinfo-info {
-    display: none;
-}
-
-#myinfo-basket {
-    display: none;
-}
-
-#myinfo-select {
-    display: none;
-}
-
-#myinfo-myqna {
-    display: none;
-}
 

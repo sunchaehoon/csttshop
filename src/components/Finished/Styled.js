@@ -6,7 +6,6 @@ export const Container = styled.div`
 `;
 
 export const Navbar = styled.div`
-    
     display: flex;
     height: 80px;
     width: 100%;

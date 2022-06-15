@@ -16,6 +16,7 @@ export const Logo = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    user-select: none;
 `;
 
 export const NvMenu = styled.div`
@@ -53,6 +54,7 @@ export const Login = styled.a`
     cursor: pointer;
     color: white;
     font-size: small;
+    user-select: none;
     &:hover {
         text-decoration: underline;
         color: white;
@@ -70,6 +72,7 @@ export const Frame = styled.a`
     cursor: pointer;
     color: white;
     font-size: large;
+    user-select: none;
     &:hover {
         color: white;
         transform: scale(1.1);

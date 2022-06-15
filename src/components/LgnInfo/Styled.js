@@ -16,6 +16,7 @@ export const Form = styled.div`
 export const Login = styled.a`
     color: white;
     font-size: small;
+    user-select: none;
     &:hover {
         color: white;
     }
