@@ -16,25 +16,41 @@ const Myinfo = () => {
 
     let info = document.querySelector("#myinfo");
     let infoInf = document.querySelector("#myinfo-info");
+    let infoBsk = document.querySelector("#myinfo-basket");
+    let infoSlt = document.querySelector("#myinfo-select");
+    let infoQna = document.querySelector("#myinfo-myqna");
+
+    let [Profile, setProfile] = useState(false);
 
 
 
     function InfoClick() {    
-        info.style.display = "none";
         infoInf.style.visibility = "visible";
+        info.style.display = "none";
+        infoBsk.style.display = "none";
+        infoSlt.style.display = "none";
+        infoQna.style.display = "none";
     }
     function BasketClick() {
-        
+        infoBsk.style.visibility = "visible";
+        info.style.display = "none";
+        infoInf.style.display = "none";
+        infoSlt.style.display = "none";
+        infoQna.style.display = "none";
     }
     function SelectClick() {
-        return (
-            <Select />
-        );
+        infoSlt.style.visibility = "visible";
+        info.style.display = "none";
+        infoInf.style.display = "none";
+        infoBsk.style.display = "none";
+        infoQna.style.display = "none";
     }
     function MyQnAClick() {
-        return (
-            <MyQnA />
-        );
+        infoQna.style.visibility = "visible";
+        info.style.display = "none";
+        infoInf.style.display = "none";
+        infoBsk.style.display = "none";
+        infoSlt.style.display = "none";
     }
     
 
@@ -50,11 +66,11 @@ const Myinfo = () => {
                         </div>
                         <S.ProfName><span>{localStorage.getItem('username')}</span></S.ProfName>
                     </S.Prof>
-                    <S.ProfDetail id="myinfo">
+                    <S.ProfDetail onChange={() => {setProfile(true)}} id="myinfo">
                         <S.ProfDetailLi>
                             <ul>
                                 <li className="profdet-li">
-                                    <Link to="/myinfo/info" className='li-link' onClick={InfoClick}>내 정보</Link>
+                                    <Link to="/myinfo/infos" className='li-link' onClick={InfoClick}>내 정보</Link>
                                 </li>
                                 <li className="profdet-li">
                                     <Link to="/myinfo/basket" className='li-link' onClick={BasketClick}>장바구니</Link>
@@ -69,6 +85,9 @@ const Myinfo = () => {
                         </S.ProfDetailLi>
                     </S.ProfDetail>
                     <Info />
+                    <Basket />
+                    <Select />
+                    <MyQnA />
                 </S.MyContent>
             </S.Container>
         </>
@@ -78,7 +97,7 @@ const Myinfo = () => {
     
         return (
             <>
-                <S.ProfDetail id="myinfo-info">
+                <S.ProfDetail onChange={() => {setProfile(true)}} id="myinfo-info">
                     <S.ProfDetailLi>
                         <ul>
                             <li className="profdet-li">
@@ -100,16 +119,16 @@ const Myinfo = () => {
         );
     }
 
-};
 
 
 
 
 
-const Basket = () => {
+
+function Basket() {
     return (
         <>
-            <S.ProfDetailLi>
+            <S.ProfDetailLi onChange={() => {setProfile(true)}} id="myinfo-basket">
                 <ul>
                     <li className="profdet-li">
                         <Link to="/myinfo/info" className='li-link'>내 정보</Link>
@@ -121,7 +140,7 @@ const Basket = () => {
                         <Link to="/myinfo/select" className='li-link'>찜한 상품</Link>
                     </li>
                     <li className="profdet-li">
-                        <Link to=".myinfo/myQ&A" className='li-link'>내Q&A</Link>
+                        <Link to="/myinfo/myQ&A" className='li-link'>내Q&A</Link>
                     </li>
                 </ul>
             </S.ProfDetailLi>
@@ -129,10 +148,10 @@ const Basket = () => {
     );
 }
 
-const Select = () => {
+function Select() {
     return (
         <>
-            <S.ProfDetailLi>
+            <S.ProfDetailLi onChange={() => {setProfile(true)}} id="myinfo-select">
                 <ul>
                     <li className="profdet-li">
                         <Link to="/myinfo/info" className='li-link'>내 정보</Link>
@@ -144,7 +163,7 @@ const Select = () => {
                         <Link to="/myinfo/select" className='li-link li-selected'>찜한 상품</Link>
                     </li>
                     <li className="profdet-li">
-                        <Link to=".myinfo/myQ&A" className='li-link'>내Q&A</Link>
+                        <Link to="/myinfo/myQ&A" className='li-link'>내Q&A</Link>
                     </li>
                 </ul>
             </S.ProfDetailLi>
@@ -152,10 +171,10 @@ const Select = () => {
     );
 }
 
-const MyQnA = () => {
+function MyQnA() {
     return (
         <>
-            <S.ProfDetailLi>
+            <S.ProfDetailLi onChange={() => {setProfile(true)}} id="myinfo-myqna">
                 <ul>
                     <li className="profdet-li">
                         <Link to="/myinfo/info" className='li-link'>내 정보</Link>
@@ -167,13 +186,15 @@ const MyQnA = () => {
                         <Link to="/myinfo/select" className='li-link'>찜한 상품</Link>
                     </li>
                     <li className="profdet-li">
-                        <Link to=".myinfo/myQ&A" className='li-link li-selected'>내Q&A</Link>
+                        <Link to="/myinfo/myQ&A" className='li-link li-selected'>내Q&A</Link>
                     </li>
                 </ul>
             </S.ProfDetailLi>
         </>
     );
 }
+
+};
 
 
 
