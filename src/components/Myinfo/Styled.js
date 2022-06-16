@@ -103,6 +103,7 @@ export const ProfName = styled.div`
 export const ProfDetail = styled.div`
     height: 410px;
     background-color: blue;
+    border-bottom-right-radius: 0.7%;
 `;
 
 export const ProfDetailLi = styled.div`
@@ -111,8 +112,18 @@ export const ProfDetailLi = styled.div`
     height: 40px;
     width: 100%;
     background-color: #f7f7f7;
-    border-radius: 2px;
 `;
+
+// Info
+
+export const InfoDiv = styled.div`
+    position: relative;
+    top: -6px;
+    height: 100px;
+    width: 100%;
+    background-color: red;
+`;
+
 
 
 

@@ -124,6 +124,10 @@ const Myinfo = () => {
                             </li>
                         </ul>
                     </S.ProfDetailLi>
+                    
+                    <S.InfoDiv>
+
+                    </S.InfoDiv>
                 </S.ProfDetail>
             </>
         );
@@ -133,22 +137,24 @@ const Myinfo = () => {
     function Basket() {
         return (
             <>
-                <S.ProfDetailLi>
-                    <ul>
-                        <li className="profdet-li">
-                            <a className='li-link' onClick={InfoClick}>내 정보</a>
-                        </li>
-                        <li className="profdet-li-selected">
-                            <a className='li-link-selected' onClick={BasketClick}>장바구니</a>
-                        </li>
-                        <li className="profdet-li">
-                            <a className='li-link' onClick={SelectClick}>찜한 상품</a>
-                        </li>
-                        <li className="profdet-li">
-                            <a className='li-link' onClick={MyQnAClick}>내Q&A</a>
-                        </li>
-                    </ul>
-                </S.ProfDetailLi>
+                <S.ProfDetail>
+                    <S.ProfDetailLi>
+                        <ul>
+                            <li className="profdet-li">
+                                <a className='li-link' onClick={InfoClick}>내 정보</a>
+                            </li>
+                            <li className="profdet-li-selected">
+                                <a className='li-link-selected' onClick={BasketClick}>장바구니</a>
+                            </li>
+                            <li className="profdet-li">
+                                <a className='li-link' onClick={SelectClick}>찜한 상품</a>
+                            </li>
+                            <li className="profdet-li">
+                                <a className='li-link' onClick={MyQnAClick}>내Q&A</a>
+                            </li>
+                        </ul>
+                    </S.ProfDetailLi>
+                </S.ProfDetail>
             </>
         );
     }  
@@ -157,22 +163,24 @@ const Myinfo = () => {
     function Select() {
         return (
             <>
-                <S.ProfDetailLi>
-                    <ul>
-                        <li className="profdet-li">
-                            <a className='li-link' onClick={InfoClick}>내 정보</a>
-                        </li>
-                        <li className="profdet-li">
-                            <a className='li-link' onClick={BasketClick}>장바구니</a>
-                        </li>
-                        <li className="profdet-li-selected">
-                            <a className='li-link-selected' onClick={SelectClick}>찜한 상품</a>
-                        </li>
-                        <li className="profdet-li">
-                            <a className='li-link' onClick={MyQnAClick}>내Q&A</a>
-                        </li>
-                    </ul>
-                </S.ProfDetailLi>
+                <S.ProfDetail>
+                    <S.ProfDetailLi>
+                        <ul>
+                            <li className="profdet-li">
+                                <a className='li-link' onClick={InfoClick}>내 정보</a>
+                            </li>
+                            <li className="profdet-li">
+                                <a className='li-link' onClick={BasketClick}>장바구니</a>
+                            </li>
+                            <li className="profdet-li-selected">
+                                <a className='li-link-selected' onClick={SelectClick}>찜한 상품</a>
+                            </li>
+                            <li className="profdet-li">
+                                <a className='li-link' onClick={MyQnAClick}>내Q&A</a>
+                            </li>
+                        </ul>
+                    </S.ProfDetailLi>
+                </S.ProfDetail>
             </>
         );
     }
@@ -181,22 +189,24 @@ const Myinfo = () => {
     function MyQnA() {
         return (
             <>
-                <S.ProfDetailLi>
-                    <ul>
-                        <li className="profdet-li">
-                            <a className='li-link' onClick={InfoClick}>내 정보</a>
-                        </li>
-                        <li className="profdet-li">
-                            <a className='li-link' onClick={BasketClick}>장바구니</a>
-                        </li>
-                        <li className="profdet-li">
-                            <a className='li-link' onClick={SelectClick}>찜한 상품</a>
-                        </li>
-                        <li className="profdet-li-selected">
-                            <a className='li-link-selected' onClick={MyQnAClick}>내Q&A</a>
-                        </li>
-                    </ul>
-                </S.ProfDetailLi>
+                <S.ProfDetail>
+                    <S.ProfDetailLi>
+                        <ul>
+                            <li className="profdet-li">
+                                <a className='li-link' onClick={InfoClick}>내 정보</a>
+                            </li>
+                            <li className="profdet-li">
+                                <a className='li-link' onClick={BasketClick}>장바구니</a>
+                            </li>
+                            <li className="profdet-li">
+                                <a className='li-link' onClick={SelectClick}>찜한 상품</a>
+                            </li>
+                            <li className="profdet-li-selected">
+                                <a className='li-link-selected' onClick={MyQnAClick}>내Q&A</a>
+                            </li>
+                        </ul>
+                    </S.ProfDetailLi>
+                </S.ProfDetail>
             </>
         );
     }
