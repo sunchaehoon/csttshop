@@ -132,7 +132,7 @@ const Myinfo = () => {
             </>
         );
     }
-    
+
 
 
     function Basket() {
