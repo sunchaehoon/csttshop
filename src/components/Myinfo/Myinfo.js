@@ -124,7 +124,7 @@ const Myinfo = () => {
                             </li>
                         </ul>
                     </S.ProfDetailLi>
-                    
+
                     <S.InfoDiv>
 
                     </S.InfoDiv>
@@ -132,6 +132,7 @@ const Myinfo = () => {
             </>
         );
     }
+    
 
 
     function Basket() {
